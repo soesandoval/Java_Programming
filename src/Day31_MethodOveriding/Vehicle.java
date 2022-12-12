@@ -7,11 +7,11 @@ public class Vehicle {
     private double price;
 
     public Vehicle(String brand, String model, String color, int year, double price) {
-        this.brand = brand;
-        this.model = model;
-        this.color = color;
-        this.year = year;
-        this.price = price;
+      setBrand(brand);
+      setModel(model);
+      setColor(color);
+      setYear(year);
+      setPrice(price);
     }
 
     public String getBrand() {
@@ -57,7 +57,7 @@ public class Vehicle {
 
     @Override
     public String toString() {
-        return "Vehicle{" +
+        return getClass().getSimpleName() + "{" +
                 "brand='" + brand + '\'' +
                 ", model='" + model + '\'' +
                 ", color='" + color + '\'' +
