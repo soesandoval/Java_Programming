@@ -6,6 +6,14 @@ public class Vehicle {
     private int year;
     private double price;
 
+    public Vehicle(String brand, String model, String color, int year, double price) {
+        this.brand = brand;
+        this.model = model;
+        this.color = color;
+        this.year = year;
+        this.price = price;
+    }
+
     public String getBrand() {
         return brand;
     }
@@ -47,7 +55,14 @@ public class Vehicle {
     }
 
 
-
-
-
+    @Override
+    public String toString() {
+        return "Vehicle{" +
+                "brand='" + brand + '\'' +
+                ", model='" + model + '\'' +
+                ", color='" + color + '\'' +
+                ", year=" + year +
+                ", price=" + price +
+                '}';
+    }
 }
