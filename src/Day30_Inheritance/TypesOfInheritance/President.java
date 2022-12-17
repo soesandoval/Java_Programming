@@ -7,8 +7,8 @@ public class President extends Person{
 
     private LocalDate electedDate;
 
-    public President(String name, int age, char gender, LocalDateTime DOB, LocalDate electedDate) {
-        super(name, age, gender, LocalDate.from(DOB));
+    public President(String name, int age, char gender, LocalDate electedDate) {
+        super(name, age, gender );
         this.electedDate = electedDate;
     }
 

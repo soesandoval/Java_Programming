@@ -8,15 +8,13 @@ public class Person {
     private String name;
     private int age;
     private char gender;
-    private LocalDate DOB;
 
 
 
-    public Person(String name, int age, char gender, LocalDate DOB) {
+
+    public Person(String name, int age, char gender ) {
         setName(name);
         setGender(gender);
-        setDOB(DOB);
-        setAge(LocalDate.now().getYear() - DOB.getYear());
 
 
 
@@ -53,14 +51,6 @@ public class Person {
         this.gender = gender;
     }
 
-    public LocalDate getDOB() {
-        return DOB;
-    }
-
-    public void setDOB(LocalDate DOB) {
-        this.DOB = DOB;
-    }
-
 
     public void eat(String food ){
         System.out.println(getName() + " is eating  " + food  );
@@ -77,7 +67,7 @@ public class Person {
                 "name='" + name + '\'' +
                 ", age=" + age +
                 ", gender=" + gender +
-                ", DOB=" + DOB +
+
                 '}';
     }
 }

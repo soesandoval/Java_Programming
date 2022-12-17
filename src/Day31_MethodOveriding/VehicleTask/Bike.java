@@ -1,4 +1,4 @@
-package Day31_MethodOveriding;
+package Day31_MethodOveriding.VehicleTask;
 
 public class Bike extends Vehicle {
 
