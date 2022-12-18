@@ -1,6 +1,6 @@
 package day33_abstraction;
 
-public class Employee {
+public abstract class Employee {
 
     private String name;
     private int age;
@@ -65,5 +65,20 @@ public class Employee {
 
     public void setSalary(double salary) {
         this.salary = salary;
+    }
+
+    public abstract void work(); // abstract method, uncompleted method
+
+
+    @Override
+    public String toString() {
+        return getClass().getSimpleName() + "{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                ", gender=" + gender +
+                ", ID='" + ID + '\'' +
+                ", jobTitle='" + jobTitle + '\'' +
+                ", salary=" + salary +
+                '}';
     }
 }
