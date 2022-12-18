@@ -26,16 +26,17 @@ public final class CydeoStudent extends Person {
     }
 
     public void setBatchName(String batchName) {
-         if(batchNumber <= 0 ){
-             System.err.println("Invalid batch number");
-             System.exit(1);
-         }
+
+        if(!(batchName.equalsIgnoreCase("zero to hero") || batchName.equalsIgnoreCase("Alumni developer"))){
+            System.err.println("Invalid batch name: " + batchName);
+            System.exit(1);
+        }
         this.batchName = batchName;
     }
 
     public void setBatchNumber(int batchNumber) {
-        if(!(batchName.equalsIgnoreCase("zero to hero") || batchName.equalsIgnoreCase("Alumni developer"))){
-            System.err.println("Invalid batch name: " + batchName);
+        if(batchNumber <= 0 ){
+            System.err.println("Invalid batch number"+ batchNumber);
             System.exit(1);
         }
         this.batchNumber = batchNumber;
