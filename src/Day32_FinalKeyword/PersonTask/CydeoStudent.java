@@ -2,7 +2,7 @@ package Day32_FinalKeyword.PersonTask;
 
 import java.time.LocalDate;
 
-public class CydeoStudent extends Person {
+public final class CydeoStudent extends Person {
 
 
     private final String ID;
@@ -17,8 +17,8 @@ public class CydeoStudent extends Person {
             System.exit(1);
         }
         this.ID = ID;
-    setBatchName(batchName);
-    setBatchNumber(batchNumber);
+        setBatchName(batchName);
+        setBatchNumber(batchNumber);
     }
 
     static {
@@ -26,11 +26,15 @@ public class CydeoStudent extends Person {
     }
 
     public void setBatchName(String batchName) {
+         if(batchNumber <= 0 ){
+             System.err.println("Invalid batch number");
+             System.exit(1);
+         }
         this.batchName = batchName;
     }
 
     public void setBatchNumber(int batchNumber) {
-        if(batchName.equalsIgnoreCase("zero to hero") || batchName.equalsIgnoreCase("Alumni developer")){
+        if(!(batchName.equalsIgnoreCase("zero to hero") || batchName.equalsIgnoreCase("Alumni developer"))){
             System.err.println("Invalid batch name: " + batchName);
             System.exit(1);
         }
@@ -50,7 +54,24 @@ public class CydeoStudent extends Person {
     }
 
 
+    public void eat() {
+        System.out.println(getName() + " is eating ");
+    }
 
+    public void drink() {
+        System.out.println(getName() + " is drinking ");
+    }
 
-
+    @Override
+    public String toString() {
+        return "CydeoStudent{" +
+                "name='" + getName() + '\'' +
+                ", gender=" + getGender() +
+                ", age=" + getAge() +
+                ", dateOfBirth=" + getDateOfBirth() +
+                "ID='" + ID + '\'' +
+                ", batchName='" + batchName + '\'' +
+                ", batchNumber=" + batchNumber +
+                '}';
+    }
 }
