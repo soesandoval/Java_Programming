@@ -10,7 +10,7 @@ public abstract class Car { // meant to be inherited
 
     private double price;
 
-    public Car(String make, String model, String color, int year, double price) {
+    public Car(String model, String color, int year, double price) {
         this.make = getClass().getSimpleName();
         this.model = model;
         setColor(color);
@@ -63,8 +63,8 @@ public abstract class Car { // meant to be inherited
 
     @Override
     public String toString() {
-        return make + "{" +
-                ", model='" + model + '\'' +
+        return getClass().getSimpleName()  + "{" +
+                "model='" + model + '\'' +
                 ", color='" + color + '\'' +
                 ", year=" + year +
                 ", price= $" + price +
