@@ -1,4 +1,4 @@
-package day34_abstraction;
+package day34_abstraction.CarTask;
 
 public abstract class Car { // meant to be inherited
 
