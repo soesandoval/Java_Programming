@@ -60,12 +60,6 @@ public class PhoneTask {
     }
 
     public void setColor(String color) {
-        String [] colors ={"White", "Black ", "Silver", "Gold", "Pink"};
-        if(Arrays.asList(colors).contains(color)) {
-            this.color = color;
-        }else {
-            System.err.println("Invalid color: " + color);
-        }
         this.color = color;
     }
 
