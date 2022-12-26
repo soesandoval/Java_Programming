@@ -1,6 +1,7 @@
 package Day30_Inheritance.PhoneTask;
 
 import java.util.Arrays;
+import java.util.IllegalFormatCodePointException;
 
 public class PhoneTask {
 
@@ -85,7 +86,23 @@ public class PhoneTask {
                 '}';
     }
 
+    @Override
+    public boolean equals(Object obj) {
 
+        if(!(obj instanceof  iPhone) ) {
+            System.err.println("Invalid object, it must be iPhone");
+            System.exit(1);
+        }
+
+       if(obj instanceof iPhone){ // if the given object is iPhone
+           if(model.equals( ( (iPhone)obj ).getModel()) ){ // if model of iphone equals to the given iphone's model
+               if(color.equals( ( ( iPhone) obj).getColor())){ // if color of iphone equals to the given iphone's color
+                    return true;
+               }
+           }
+       }
+       return false;
+    }
 
 
 
