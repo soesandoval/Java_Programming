@@ -26,7 +26,34 @@ public class Circle {
         return 2 * radius * pi;
     }
 
+    @Override
+    public String toString() {
+        return "Circle{" +
+                "radius=" + radius +
+                ", area =" + area() +
+                "perimeter=" + perimeter()+
+                '}';
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+
+        if (!(obj instanceof Circle)) { // if object is not circle, then it should not be compared
+            System.err.println("Invalid object");
+            System.exit(1);
+        }
+
+        if (radius == ((Circle) obj).radius){ // if the current circle's radius is equal to the given circle's radius, then they equal each other
+            return true;
+        }
+
+        return false;
+
+    }
 
 
 
-}
+
+
+    }
+
