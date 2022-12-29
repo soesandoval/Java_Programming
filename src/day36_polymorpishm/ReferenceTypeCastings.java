@@ -7,7 +7,12 @@ import Day30_Inheritance.PhoneTask.Nokia;
 import Day30_Inheritance.PhoneTask.PhoneTask;
 import day33_abstraction.Developer;
 import day33_abstraction.Employee;
+import day33_abstraction.Teacher;
 import day33_abstraction.Tester;
+import day35_polymorphism.transportationTask.AutoPark;
+import day35_polymorphism.transportationTask.AutoPilot;
+import day35_polymorphism.transportationTask.Electric;
+import day35_polymorphism.transportationTask.Tesla;
 
 public class ReferenceTypeCastings {
 
@@ -58,6 +63,30 @@ public class ReferenceTypeCastings {
         System.out.println( ((Developer)employee).getProgrammingLanguage());
 
         // there is no "IS A" relationship with the developer; therefore it cannot be casted....Tester tester = (Tester)Employee;
+
+        System.out.println("==============================================");
+
+        Electric electric = (Electric) new Tesla("Tesla", "Model Y", "Blue", 2020, 55000);
+        //UPCASTING done implicitly
+
+        electric.charge();
+        ((Tesla)electric).selfDrive(); // down-casting done explicitly
+        ((AutoPilot)electric).selfDrive(); // down casting done eplicitly
+
+        System.out.println("=============================================");
+
+        Employee employee1 = new Teacher("James", 45, 'M', "B1", "Math teacher", 50000);
+
+        Employee employee2= new Developer("Lucy", 30, 'F', "C1", "Java developer", 100000, "Java");
+
+        Employee employee3 = new Tester("Sofia", 20, 'F', "D1", "Automation tester", 50000);
+
+        employee1.work();
+        employee2.work();
+        employee3.work();
+
+
+
 
 
     }
