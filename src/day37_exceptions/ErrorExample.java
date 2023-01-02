@@ -13,7 +13,8 @@ public class ErrorExample {
        /* while(true){
             System.out.println(++i);
             pizzas.add(new Pizza('S', 3, 4))
-        } */
+        } */   // out of memory error
+
 
 
 
